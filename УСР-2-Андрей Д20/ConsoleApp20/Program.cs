@@ -9,14 +9,14 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            int N1, N2, result;
+            int N1, N2, result; // не очень хороший способ объявления переменных. Лучше кажую с новой строки. Это не ошибка. И не соответствует правилам именования.
             char option;
 
             Console.Write("Введите первое число: ");
-            N1 = Convert.ToInt32(Console.ReadLine());
+            N1 = Convert.ToInt32(Console.ReadLine()); // желательно добавить обработку исключения, в случае, если не удастся преобразовать прочитанную строку в int (например, ввели дробное число, или буквы...)
 
             Console.Write("Введите второе число: ");
-            N2 = Convert.ToInt32(Console.ReadLine());
+            N2 = Convert.ToInt32(Console.ReadLine()); // желательно добавить обработку исключения, в случае, если не удастся преобразовать прочитанную строку в int (например, ввели дробное число, или буквы...)
 
             Console.WriteLine("Калькулятор");
             Console.WriteLine("1. Сложение");
@@ -25,7 +25,7 @@ namespace Program
             Console.WriteLine("4. Деление");
 
             Console.Write("Введите номер операции, которую вы хотите выполнить: ");
-            option = Convert.ToChar(Console.ReadLine());
+            option = Convert.ToChar(Console.ReadLine()); // желательно добавить обработку исключения, в случае, если не удастся преобразовать прочитанную строку в int (например, ввели дробное число, или буквы...)
 
             switch (option)
             {
@@ -45,7 +45,7 @@ namespace Program
                     break;
 
                 case '4':
-                    result = N1 / N2;
+                    result = N1 / N2; // // желательно добавить обработку исключения, в случае, если второе число = 0
                     Console.WriteLine($"Результат деления: {result}");
                     break;
 
